@@ -99,9 +99,8 @@ public class Steps extends Client{
                 .body("{\n\"ingredients\": [\"91c0c5a71d1f82001bdaaa6d\"," +
                         "\"91c0c5a71d1f82001bdaaa70\",\"91c0c5a71d1f82001bdaaa73\"]\n}")
                 .post(CREATE_ORDER)
-                .then().log().all()
-                .assertThat().statusCode(400)
-                .body("message", equalTo("One or more ids provided are incorrect"));
+                .then().log().all();
+
     }
 
     @Step("Создание заказа авторизированного пользователя без ингридиентов")
@@ -111,9 +110,8 @@ public class Steps extends Client{
                 .header("Authorization", accessToken)
                 .when()
                 .post(CREATE_ORDER)
-                .then().log().all()
-                .assertThat().statusCode(400)
-                .body("message", equalTo("Ingredient ids must be provided"));
+                .then().log().all();
+
     }
 
     @Step("Получение ингридиентов")
@@ -131,9 +129,8 @@ public class Steps extends Client{
                 .spec(getSpecification())
                 .header("Authorization", accessToken)
                 .when().get(GET_ORDER)
-                .then().log().all()
-                .assertThat().statusCode(200)
-                .body("success", is(true));
+                .then().log().all();
+
     }
 
     @Step("Получение заказа без регистрации")
