@@ -8,10 +8,11 @@ import org.junit.Test;
 import praktikum.*;
 
 public class OrderTest {
-    private Steps steps;
+    private StepsUser stepsUser;
+    private StepsOrder stepsOrder;
     private User user;
     private Methods methods;
-    private praktikum.UserLogin UserLogin;
+    private UserLogin UserLogin;
 
     private String accessToken;
     private int code;
@@ -20,7 +21,8 @@ public class OrderTest {
     @Before
     public void setOrder() {
         user = UserGenerator.random();
-        steps = new Steps();
+        stepsUser = new StepsUser();
+        stepsOrder = new StepsOrder();
         methods = new Methods();
         UserLogin = new UserLogin(user);
     }
@@ -28,43 +30,43 @@ public class OrderTest {
     @After
     public void cleanUp() {
         if (accessToken != null) {
-            steps.deleteUser(accessToken);
+            stepsUser.deleteUser(accessToken);
         }
     }
 
     @Test
     @DisplayName("Создание заказа без авторизации")
     public void createOrderWithoutAuthorizationTest() {
-        ValidatableResponse response = steps.createOrderUnauthorizedUser();
+        ValidatableResponse response = stepsOrder.createOrderUnauthorizedUser();
         Methods.checkCreateOrderResponse(response, code, status);
     }
 
     @Test
     @DisplayName("Создание заказа с неверным хешем")
     public void createOrderWithInvalidHashTest() {
-        steps.createUser(user);
-        ValidatableResponse response = steps.loginUser(UserLogin);
+        stepsUser.createUser(user);
+        ValidatableResponse response = stepsUser.loginUser(UserLogin);
         accessToken = response.extract().path("accessToken").toString();
-        steps.createOrderAuthorizedUserWithInvalidHash(accessToken);
+        stepsOrder.createOrderAuthorizedUserWithInvalidHash(accessToken);
     }
 
     @Test
     @DisplayName("Создание заказа с авторизацией и ингридиентами")
     public void createOrderWithAuthorizationIngredientsTest() {
-        steps.createUser(user);
-        ValidatableResponse response = steps.loginUser(UserLogin);
+        stepsUser.createUser(user);
+        ValidatableResponse response = stepsUser.loginUser(UserLogin);
         accessToken = response.extract().path("accessToken").toString();
-        steps.createOrderAuthorizedUserWithoutIngredients(accessToken);
+        stepsOrder.createOrderAuthorizedUserWithoutIngredients(accessToken);
         Methods.checkCreateOrderResponse(response, code, status);
     }
 
     @Test
     @DisplayName("Создание заказа с авторизацией и без ингридиентов")
     public void createOrderWithAuthorizationAndWithoutIngredientTest() {
-        steps.createUser(user);
-        ValidatableResponse response = steps.loginUser(UserLogin);
+        stepsUser.createUser(user);
+        ValidatableResponse response = stepsUser.loginUser(UserLogin);
         accessToken = response.extract().path("accessToken").toString();
-        steps.createOrderAuthorizedUserWithoutIngredients(accessToken);
+        stepsOrder.createOrderAuthorizedUserWithoutIngredients(accessToken);
 
     }
 }

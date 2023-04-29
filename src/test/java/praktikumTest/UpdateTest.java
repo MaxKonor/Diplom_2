@@ -12,10 +12,10 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class UpdateTest {
     private User user;
-
     private User userForUpdate;
-    private Steps steps;
-    private praktikum.UserLogin UserLogin;
+    private StepsUser stepsUser;
+    private StepsOrder stepsOrder;
+    private UserLogin UserLogin;
     private Methods methods;
     private String accessToken;
 
@@ -23,7 +23,8 @@ public class UpdateTest {
     public void setUser() {
         user = UserGenerator.random();
         userForUpdate = UserGenerator.random();
-        steps = new Steps();
+        stepsUser = new StepsUser();
+        stepsOrder = new StepsOrder();
         methods = new Methods();
         UserLogin = new UserLogin(user);
     }
@@ -31,7 +32,7 @@ public class UpdateTest {
     @After
     public void cleanUp() {
         if (accessToken != null) {
-            steps.deleteUser(accessToken);
+            stepsUser.deleteUser(accessToken);
         }
     }
 
@@ -42,12 +43,12 @@ public class UpdateTest {
         User userForUpdate = initialUser.clone();
         userForUpdate.setEmail(RandomStringUtils.randomAlphabetic(6) + "@changeableness.com");
 
-        String accessToken = steps.createUser(initialUser)
+        String accessToken = stepsUser.createUser(initialUser)
                 .extract()
                 .header("Authorization");
 
-        steps.updateUser(accessToken, userForUpdate);
-        ValidatableResponse updatedUserResponse = steps.getDataUser(accessToken);
+        stepsUser.updateUser(accessToken, userForUpdate);
+        ValidatableResponse updatedUserResponse = stepsUser.getDataUser(accessToken);
 
         updatedUserResponse.body("user.name", equalTo(initialUser.getName()))
                 .and()
@@ -58,7 +59,7 @@ public class UpdateTest {
     @DisplayName("Изменения данных не зарегистрированного пользователя")
     public void updateDataUnregisteredUserTest() {
         userForUpdate.setEmail(RandomStringUtils.randomAlphabetic(6) + "@changeableness.com");
-        ValidatableResponse response = steps.updateUser("", userForUpdate);
+        ValidatableResponse response = stepsUser.updateUser("", userForUpdate);
         methods.checkUpdateNoUser(response);
 
     }

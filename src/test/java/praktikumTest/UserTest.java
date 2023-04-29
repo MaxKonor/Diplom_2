@@ -5,14 +5,12 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import praktikum.Methods;
-import praktikum.Steps;
-import praktikum.User;
-import praktikum.UserGenerator;
+import praktikum.*;
 
 public class UserTest {
     private User user;
-    private Steps steps;
+    private StepsUser stepsUser;
+    private StepsOrder stepsOrder;
     private Methods methods;
     private String accessToken;
     private int code;
@@ -21,7 +19,8 @@ public class UserTest {
     @Before
     public void setUser() {
         user = UserGenerator.random();
-        steps = new Steps();
+        stepsUser = new StepsUser();
+        stepsOrder = new StepsOrder();
         methods = new Methods();
 
     }
@@ -29,14 +28,14 @@ public class UserTest {
     @After
     public void cleanUp() {
         if (accessToken != null) {
-            steps.deleteUser(accessToken);
+            stepsUser.deleteUser(accessToken);
         }
     }
 
     @Test
     @DisplayName("Проверка создание пользователя")
     public void checkCreationUserTest() {
-        ValidatableResponse response = steps.createUser(user);
+        ValidatableResponse response = stepsUser.createUser(user);
         accessToken = response.extract().path("accessToken").toString();
         methods.checkCreateUserResponse(response, code, status);
 
@@ -46,7 +45,7 @@ public class UserTest {
     @DisplayName("Проверка создание пользователя без имени")
     public void checkCreationUserWithoutNameTest() {
         user.setName("");
-        ValidatableResponse response = steps.createUser(user);
+        ValidatableResponse response = stepsUser.createUser(user);
         methods.checkCorrectCreateUserResponse(response);
 
     }
@@ -55,7 +54,7 @@ public class UserTest {
     @DisplayName("Проверка создание пользователя без email")
     public void checkCreationUserWithoutEmailTest() {
         user.setEmail("");
-        ValidatableResponse response = steps.createUser(user);
+        ValidatableResponse response = stepsUser.createUser(user);
         methods.checkCorrectCreateUserResponse(response);
 
     }
@@ -64,15 +63,15 @@ public class UserTest {
     @DisplayName("Проверка создание пользователя без пароля")
     public void checkCreationUserWithoutPasswordTest() {
         user.setPassword("");
-        ValidatableResponse response = steps.createUser(user);
+        ValidatableResponse response = stepsUser.createUser(user);
         methods.checkCorrectCreateUserResponse(response);
     }
 
     @Test
     @DisplayName("Проверка создание пользователя с одинаковым логином")
     public void checkCreationUserWithTheSameloginTest() {
-        steps.createUser(user);
-        ValidatableResponse response = steps.createUser(user);
+        stepsUser.createUser(user);
+        ValidatableResponse response = stepsUser.createUser(user);
         methods.checkCorrectUserDoubleResponse(response);
 
     }

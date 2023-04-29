@@ -9,8 +9,9 @@ import praktikum.*;
 
 public class LoginTest {
     private User user;
-    private Steps steps;
-    private praktikum.UserLogin UserLogin;
+    private StepsUser stepsUser;
+    private StepsOrder stepsOrder;
+    private UserLogin UserLogin;
     private Methods methods;
     private String accessToken;
     private int code;
@@ -19,7 +20,8 @@ public class LoginTest {
     @Before
     public void setUser() {
         user = UserGenerator.random();
-        steps = new Steps();
+        stepsUser = new StepsUser();
+        stepsOrder = new StepsOrder();
         methods = new Methods();
         UserLogin = new UserLogin(user);
 
@@ -28,15 +30,15 @@ public class LoginTest {
     @After
     public void cleanUp() {
         if (accessToken != null) {
-            steps.deleteUser(accessToken);
+            stepsUser.deleteUser(accessToken);
         }
     }
 
     @Test
     @DisplayName("Тестирование авторизации")
     public void authorizationLoginTest() {
-        steps.createUser(user);
-        ValidatableResponse response = steps.loginUser(UserLogin);
+        stepsUser.createUser(user);
+        ValidatableResponse response = stepsUser.loginUser(UserLogin);
         accessToken = response.extract().path("accessToken").toString();
         methods.checkCreateUserResponse(response, code, status);
 
@@ -46,7 +48,7 @@ public class LoginTest {
     @DisplayName("Тестирование авторизации без логина")
     public void authorizationWithoutLoginTest() {
         user.setEmail("");
-        ValidatableResponse response = steps.loginUser(UserLogin);
+        ValidatableResponse response = stepsUser.loginUser(UserLogin);
         methods.checkEmailOrPasswordIncorrect(response);
 
     }
@@ -55,7 +57,7 @@ public class LoginTest {
     @DisplayName("Тестирование авторизации без пароля")
     public void authorizationWithoutPasswordTest() {
         user.setPassword("");
-        ValidatableResponse response = steps.loginUser(UserLogin);
+        ValidatableResponse response = stepsUser.loginUser(UserLogin);
         methods.checkEmailOrPasswordIncorrect(response);
 
     }
