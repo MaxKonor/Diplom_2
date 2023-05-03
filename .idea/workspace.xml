@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b79852a7-01f6-4896-9a76-7ada4d78d487" name="Changes" comment=" due to the removal and splitting of the class Steps  into two classes, the test classes have been changed: GetOrderTest, LoginTest, OrderTest, UpdateTest and UserTest">
+      <change afterPath="$PROJECT_DIR$/target/allure-results/5866fd90-0d16-4080-9e8b-0b73c6be43bf-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/58a3ec79-4bcd-4659-ae98-ca89c96db55c-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/5dec9718-c13c-446a-9c8d-53895105ced5-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/f037cd34-2476-4792-9f0c-9af734af0c5b-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/praktikum/Steps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/14d0d0bd-e2e8-4f8b-83a2-7c40e60b95df-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/8ecc168e-bcd9-40c2-b795-69a9be8e7e23-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/20188fae-6fe4-43ee-ad5b-34f6f7d96dc4-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/40022857-7c2b-4389-8b6f-979d98373ebb-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/41eede64-a487-4563-af8d-d12f7f74228b-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/05dc4760-4ce2-46ac-9604-d66327d002a2-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/46eb3f51-6316-4bb6-81f2-090d1229b987-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5bca52de-1a4a-4aa3-ae19-6c5b8596fec5-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/234ce55f-0c44-408e-949c-30487f2140a3-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/83395e49-c49c-43bc-aeff-be7aec30cbc1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8d572b60-7273-4980-976f-3e137ead2f7a-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/51bf6f22-aa5a-499d-8c1e-3dc95c94f8b6-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a14d943d-1cdd-4b2d-850d-f47f8a64e6cc-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/52c2381a-6cae-47fd-9099-3ce38dc05eb6-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a30188fa-c57f-4cd8-bf99-075293cbd2a0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a3641866-93cd-480a-b440-a46eb7380dcf-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/e531dfee-c766-4e28-b191-830ad1185bc1-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b0c53e90-2170-4ce9-98ad-02e90aacfcab-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/40e6ca87-e2c4-42d8-9288-b852a35b6c75-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b35f734c-b31b-4b0d-b63b-b771ca5b592f-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/2cfe6dcf-d921-4198-a965-46e182ecc126-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/bc9a17c2-f82d-495d-bd5d-9943b375bcc6-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/5f1944b2-f4c3-4eab-9c48-32454e63fcff-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d891a789-ad63-4e8c-9ee5-80d735e32664-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/d53b3d46-0970-47b4-9f42-fe937a9ededf-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e66d8948-9d72-4cd1-b5f0-469711961689-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/60588a11-c8ae-4129-920c-0fd22b3b0c27-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e6a0d07a-ad54-4a7d-87e7-e0d9a94444cc-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/a4fa22c7-b6df-4a5e-8951-7edcb7061a75-result.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2P5tigkmzyerAq7JwVNA3t217sO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Desktop/Diplom_Kondrashov_Maksim_QA_Java_17/Diplom_Kondrashov_Maksim_QA_Java_17/Diplom/Diplom_2"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.praktikumTest in Diplom_2 (1)">
+    <configuration name="praktikumTest in Diplom_2 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="praktikumTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="praktikumTest" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="praktikumTest in Diplom_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/praktikumTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.praktikumTest in Diplom_2 (1)" />
+        <item itemvalue="JUnit.praktikumTest in Diplom_2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b79852a7-01f6-4896-9a76-7ada4d78d487" name="Changes" comment="" />
+      <created>1682758899079</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682758899079</updated>
+    </task>
+    <task id="LOCAL-00001" summary=" was added library into class Methods org.apache.http.HttpStatus">
+      <created>1682759999507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682759999507</updated>
+    </task>
+    <task id="LOCAL-00002" summary=" move the response check to another method">
+      <created>1682760202483</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682760202483</updated>
+    </task>
+    <task id="LOCAL-00003" summary=" move the response check to another method">
+      <created>1682760225217</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682760225217</updated>
+    </task>
+    <task id="LOCAL-00004" summary=" the Steps class has been split into two classes StepsOrder and StepUser and removed">
+      <created>1682760931228</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682760931228</updated>
+    </task>
+    <task id="LOCAL-00005" summary=" due to the removal and splitting of the class Steps  into two classes, the test classes have been changed: GetOrderTest, LoginTest, OrderTest, UpdateTest and UserTest">
+      <created>1682761389112</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682761389112</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=" was added library into class Methods org.apache.http.HttpStatus" />
+    <MESSAGE value=" move the response check to another method" />
+    <MESSAGE value=" the Steps class has been split into two classes StepsOrder and StepUser and removed" />
+    <MESSAGE value=" due to the removal and splitting of the class Steps  into two classes, the test classes have been changed: GetOrderTest, LoginTest, OrderTest, UpdateTest and UserTest" />
+    <option name="LAST_COMMIT_MESSAGE" value=" due to the removal and splitting of the class Steps  into two classes, the test classes have been changed: GetOrderTest, LoginTest, OrderTest, UpdateTest and UserTest" />
+  </component>
+</project>
